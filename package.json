@@ -1,0 +1,51 @@
+{
+  "name": "discord-user-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for Discord that drives your own personal account (or a bot): 400+ tools covering everything the Discord client can do",
+  "keywords": [
+    "discord",
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "selfbot",
+    "claude"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zongwei-tang/discord-mcp.git"
+  },
+  "homepage": "https://github.com/zongwei-tang/discord-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/zongwei-tang/discord-mcp/issues"
+  },
+  "type": "module",
+  "bin": {
+    "discord-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "tsc && node --test dist/test/*.test.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "qrcode": "^1.5.4",
+    "ws": "^8.23.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/qrcode": "^1.5.6",
+    "@types/ws": "^8.18.2",
+    "typescript": "^7.0.2"
+  }
+}
